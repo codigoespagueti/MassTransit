@@ -82,7 +82,7 @@ namespace MassTransit.AmazonSqsTransport.Configuration.Configuration
         public IReadOnlyHostCollection Hosts => _hosts;
 
         public IClientContextProvider ClientContextProvider { get; set; }
-        
+
         IAmazonSqsHostTopology CreateHostTopology(Uri hostAddress)
         {
             return new AmazonSqsHostTopology(new AmazonSqsMessageNameFormatter(), hostAddress, Topology);
